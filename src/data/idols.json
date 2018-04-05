@@ -1,13 +1,29 @@
-{
-  "test-idol": {
-    "name": "Testuo",
+[
+  {
+    "id": 1,
+    "name": "Test-uo",
     "price": 200,
-    "images": {
-      "sprites": [],
-      "portraits": [],
-      "fullbodies": []
-    },
+    "level": 1,
+    "form": 0,
     "cash_mod": 1,
-    "fans_mod": 1
+    "fans_mod": 1,
+    "accessories": [
+
+    ],
+    "images": {
+      "sprites": [
+
+      ],
+      "portraits": [
+
+      ],
+      "fullbodies": [
+
+      ]
+    },
+    "active": false,
+    "times_clicked": 0,
+    "story": 1,
+    "story_stage": 0
   }
-}
+]
