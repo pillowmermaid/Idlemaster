@@ -1,0 +1,13 @@
+{
+  "test-idol": {
+    "name": "Testuo",
+    "price": 200,
+    "images": {
+      "sprites": [],
+      "portraits": [],
+      "fullbodies": []
+    },
+    "cash_mod": 1,
+    "fans_mod": 1
+  }
+}

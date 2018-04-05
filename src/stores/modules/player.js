@@ -1,19 +1,18 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-
-Vue.use(Vuex);
-
 const state = {
-  player: {}
+  fans: 0,
+  money: 0,
+  stages: [],
+  idols: []
 };
 
 const getters = {
+  activeIdols: state => {
+  }
 };
 
 const actions = {
 
 };
-
 
 const mutations = {
 };
