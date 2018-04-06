@@ -5,8 +5,12 @@
 </template>
 
 <script>
+import IdolShop from '@/components/IdolShop'
 export default {
-  name: 'Main Screen',
+  name: 'main-screen',
+  components: {
+    IdolShop
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

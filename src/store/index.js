@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import idols from '@/data/idols'
+import player from '@/store/modules/player'
+import shops from '@/store/modules/shops'
+import settings from '@/store/modules/settings'
 
 Vue.use(Vuex)
 
 const state = {
-  'idol_resevoir': idols,
 }
 
 const getters = {
@@ -20,6 +21,11 @@ const mutations = {
 
 export default new Vuex.Store({
   strict: true,
+  modules: {
+    player,
+    shops,
+    settings
+  },
   state,
   getters,
   actions,
