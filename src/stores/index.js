@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import idols from '@/data/idols'
 
 Vue.use(Vuex)
 
 const state = {
-  player: {}
+  'idol_resevoir': idols,
 }
 
 const getters = {
