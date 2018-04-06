@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-
+  <div class="main-screen screen">
+    Main Screen
   </div>
 </template>
 
@@ -21,3 +21,4 @@ h1, h2 {
   font-weight: normal;
 }
 </style>
+z

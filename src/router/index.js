@@ -1,15 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import MainScreen from '@/screens/MainScreen'
 
 Vue.use(Router)
 
+const routes = [
+  { path: '/', component: MainScreen, name: 'main-screen' }
+  // { path: '/options', component: Index, name: 'learn-more' }
+]
+
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
-  ]
+  mode: 'history',
+  routes
 })

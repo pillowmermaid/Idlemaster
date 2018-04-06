@@ -3,25 +3,24 @@ const state = {
   money: 0,
   stages: [],
   idols: []
-};
+}
 
 const getters = {
   activeIdols: state => {
   }
-};
+}
 
 const actions = {
 
-};
+}
 
 const mutations = {
-};
+}
 
 
-export default new Vuex.Store({
-  strict: true,
+export default {
   state,
   getters,
   actions,
-  mutations,
-});
+  mutations
+}
