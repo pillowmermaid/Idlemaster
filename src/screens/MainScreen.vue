@@ -1,19 +1,26 @@
 <template>
   <div class="main-screen screen">
     Main Screen
+    <p>Money: {{ this.$store.state.player.money }}</p>
+    <p>Fans: {{ this.$store.state.player.fans }}</p>
+    <IdolShop />
+    <button type="button" name="button" v-on:click="moneyClick()">+</button>
+    <Player />
   </div>
 </template>
 
 <script>
 import IdolShop from '@/components/IdolShop'
+import Player from '@/components/Player'
 export default {
   name: 'main-screen',
   components: {
-    IdolShop
+    IdolShop,
+    Player
   },
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  methods: {
+    moneyClick () {
+      this.$store.dispatch('moneyClick')
     }
   }
 }

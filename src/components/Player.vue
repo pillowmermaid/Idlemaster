@@ -1,6 +1,7 @@
 <template>
-  <div class="idol-store store-window">
-    <div v-for="(idol, i) in idols" :key="`inventory-${i}`" v-on:click="buy(idol)" >
+  <div class="player">
+    <p>My Band</p>
+    <div class="bandmember" v-for="(idol, i) in idols" :key="`bandmember-${i}`">
       {{ idol.name }}
     </div>
   </div>
@@ -9,29 +10,30 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-  name: 'idol-shop',
+  name: 'player',
   data () {
     return {
     }
   },
   computed: {
     ...mapGetters({
-      idols: 'getIdols'
+      idols: 'getFullRoster'
     })
   },
   created () {
-    this.$store.dispatch('initIdols')
-  },
-  methods: {
-    buy (idol) {
-      this.$store.dispatch('purchaseIdol', idol)
-    }
+    this.$store.dispatch('getPlayerIdols')
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+p {
+  font-weight: bold;
+}
+.bandmember {
+  color: red;
+}
 h1, h2 {
   font-weight: normal;
 }

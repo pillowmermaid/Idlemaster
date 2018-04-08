@@ -7,6 +7,10 @@ import settings from '@/store/modules/settings'
 Vue.use(Vuex)
 
 const state = {
+  save_state: {
+    player: {},
+    settings: {}
+  }
 }
 
 const getters = {

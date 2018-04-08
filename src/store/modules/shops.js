@@ -5,11 +5,13 @@ const state = {
 }
 
 const getters = {
-  getIdols: state => state.idols
+  getIdols: (state, getters, rootState) => {
+    return state.idols.filter(idol => !rootState.player.idols.find(playerIdol => idol.name === playerIdol.name))
+  }
 }
 
 const actions = {
-  getAllIdols ({ commit }) {
+  initIdols ({ commit }) {
     commit('setIdols', idols)
   }
 }
@@ -19,7 +21,6 @@ const mutations = {
     state.idols = idols
   }
 }
-
 
 export default {
   state,
