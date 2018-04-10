@@ -1,7 +1,9 @@
 import idols from '@/data/idols'
 
 const state = {
-  'idols': []
+  'idols': [],
+  'accessories': [],
+  'stages': []
 }
 
 const getters = {

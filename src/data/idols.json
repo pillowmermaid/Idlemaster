@@ -7,9 +7,6 @@
     "form": 0,
     "cash_mod": 1,
     "fans_mod": 1,
-    "accessories": [
-
-    ],
     "images": {
       "sprites": [
 
@@ -33,9 +30,6 @@
     "form": 0,
     "cash_mod": 1.3,
     "fans_mod": 1.1,
-    "accessories": [
-
-    ],
     "images": {
       "sprites": [
 
@@ -59,9 +53,6 @@
     "form": 0,
     "cash_mod": 1.3,
     "fans_mod": 1.1,
-    "accessories": [
-
-    ],
     "images": {
       "sprites": [
 

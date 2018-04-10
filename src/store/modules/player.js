@@ -1,8 +1,13 @@
 const state = {
   fans: 0,
   money: 0,
+  click_val: 1,
+  click_mod: 0,
+  passive_val: 0,
+  passive_mod: 0,
   stages: [],
-  idols: []
+  idols: [],
+  accessories: []
 }
 
 const getters = {
@@ -19,8 +24,12 @@ const actions = {
   purchaseIdol ({ commit }, idol) {
     commit('addIdol', idol)
   },
-  moneyClick ({ commit }) {
-    const inc = 1
+  moneyClick ({ commit, state }) {
+    const inc = state.click_val + (state.click_val * state.click_mod)
+    commit('incMoney', inc)
+  },
+  passiveMoney ({ commit, state }) {
+    const inc = state.passive_val + (state.passive_val * state.passive_mod)
     commit('incMoney', inc)
   }
 }
