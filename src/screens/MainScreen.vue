@@ -1,7 +1,7 @@
 <template>
   <div class="main-screen screen">
     Main Screen
-    <p>Money: {{ this.$store.state.player.money }}</p>
+    <p>Money: {{ Math.floor(this.$store.state.player.money) }}</p>
     <p>Fans: {{ this.$store.state.player.fans }}</p>
     <IdolShop />
     <button type="button" name="button" v-on:click="moneyClick()">+</button>
@@ -17,6 +17,11 @@ export default {
   components: {
     IdolShop,
     Player
+  },
+  mounted () {
+    setInterval(() => {
+      this.$store.dispatch('passiveMoney')
+    }, 1000)
   },
   methods: {
     moneyClick () {

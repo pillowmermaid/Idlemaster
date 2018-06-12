@@ -7,9 +7,7 @@ const state = {
 }
 
 const getters = {
-  getIdols: (state, getters, rootState) => {
-    return state.idols.filter(idol => !rootState.player.idols.find(playerIdol => idol.name === playerIdol.name))
-  }
+  getIdols: (state, getters, rootState) => state.idols.filter(idol => !rootState.player.all_idols.find(playerIdol => idol.name === playerIdol.name))
 }
 
 const actions = {
